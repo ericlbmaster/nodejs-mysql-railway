@@ -1,6 +1,6 @@
 import express from 'express'
 import {pool} from './db.js'
-import { PORT } from './config.js'
+import {PORT, DB_HOST, DB_NAME, DB_PASSWORD, DB_USER, DB_PORT} from './config.js'
 
 const app = express()
 
@@ -30,3 +30,9 @@ app.get('/create', async (req, res) => {
 
 app.listen(PORT)
 console.log('Server on port ', PORT)
+console.log('<<<<< DB info >>>>>')
+console.log('DB_HOST: ', DB_HOST)
+console.log('DB_NAME ', DB_NAME)
+console.log('DB_PORT ', DB_PORT)
+console.log('DB_USER ', DB_USER)
+console.log('DB_PASSWORD ', DB_PASSWORD)
