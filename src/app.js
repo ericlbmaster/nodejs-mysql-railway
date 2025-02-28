@@ -22,4 +22,4 @@ app.get('/create', async (req, res) => {
 })
 
 app.listen(DB_PORT)
-console.log('Server omn port ', DB_PORT)
+console.log('Server on port ', DB_PORT)
