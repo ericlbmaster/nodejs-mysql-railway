@@ -1,6 +1,6 @@
 import express from 'express'
 import {pool} from './db.js'
-import { PORT } from './config.js'
+import { DB_PORT } from './config.js'
 
 const app = express()
 
@@ -21,5 +21,5 @@ app.get('/create', async (req, res) => {
     res.json(result)
 })
 
-app.listen(PORT)
-console.log('Server omn port ', PORT)
+app.listen(DB_PORT)
+console.log('Server omn port ', DB_PORT)
