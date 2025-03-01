@@ -12,4 +12,4 @@ import {DB_URL} from './config.js'
 //     }
 // )
 console.log('DB_URL: ', DB_URL)
-export const pool = createPool(DB_URL)
+export const pool = createPool(DB_URL+'&connectionLimit=10')
