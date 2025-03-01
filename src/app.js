@@ -1,6 +1,7 @@
 import express from 'express'
 import {pool} from './db.js'
-import {PORT, DB_HOST, DB_NAME, DB_PASSWORD, DB_USER, DB_PORT, DB_URL} from './config.js'
+//import {PORT, DB_HOST, DB_NAME, DB_PASSWORD, DB_USER, DB_PORT, DB_URL} from './config.js'
+import {PORT,DB_URL} from './config.js'
 
 const app = express()
 
