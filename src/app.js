@@ -28,15 +28,15 @@ app.get('/create', async (req, res) => {
     res.json(result)
 })
 
-//app.listen(PORT)
-app.listen(PORT, '::', () => {
-    console.log(`Server listening on [::]${PORT}`);
-});
+app.listen(PORT)
+// app.listen(PORT, '::', () => {
+//     console.log(`Server listening on [::]${PORT}`);
+// });
 
 //console.log('Server on port ', PORT)
 console.log('<<<<< DB info >>>>>')
 console.log('DB_HOST: ', DB_HOST)
-console.log('DB_NAME ', DB_NAME)
-console.log('DB_PORT ', DB_PORT)
-console.log('DB_USER ', DB_USER)
-console.log('DB_PASSWORD ', DB_PASSWORD)
+console.log('DB_NAME: ', DB_NAME)
+console.log('DB_PORT: ', DB_PORT)
+console.log('DB_USER: ', DB_USER)
+console.log('DB_PASSWORD: ', DB_PASSWORD)
