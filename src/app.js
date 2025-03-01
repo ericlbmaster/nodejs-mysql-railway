@@ -1,7 +1,7 @@
 import express from 'express'
 import {pool} from './db.js'
-//import {PORT, DB_HOST, DB_NAME, DB_PASSWORD, DB_USER, DB_PORT, DB_URL} from './config.js'
-import {PORT,DB_URL} from './config.js'
+import {PORT, DB_HOST, DB_NAME, DB_PASSWORD, DB_USER, DB_PORT, DB_URL} from './config.js'
+//import {PORT,DB_URL} from './config.js'
 
 const app = express()
 
@@ -25,20 +25,21 @@ app.get('/ping', async (req, res) => {
 })
 
 app.get('/create', async (req, res) => {
-    const result = await pool.query('INSERT INTO users(name VALUES ("John"))')
+    const result = await pool.query('INSERT INTO users(username VALUES ("John"))')
     res.json(result)
 })
 
-//app.listen(PORT)
 app.listen(PORT, '::', () => {
     console.log(`Server listening on [::]${PORT}`);
 });
 
+//app.listen(PORT)
 //console.log('Server on port ', PORT)
+
 console.log('<<<<< DB info >>>>>')
-console.log('DB_URL: ', DB_URL)
-// console.log('DB_HOST: ', DB_HOST)
-// console.log('DB_NAME: ', DB_NAME)
-// console.log('DB_PORT: ', DB_PORT)
-// console.log('DB_USER: ', DB_USER)
-// console.log('DB_PASSWORD: ', DB_PASSWORD)
+//console.log('DB_URL: ', DB_URL)
+console.log('DB_HOST: ', DB_HOST)
+console.log('DB_NAME: ', DB_NAME)
+console.log('DB_PORT: ', DB_PORT)
+console.log('DB_USER: ', DB_USER)
+console.log('DB_PASSWORD: ', DB_PASSWORD)
