@@ -11,4 +11,5 @@ import {DB_URL} from './config.js'
 //         database: DB_NAME
 //     }
 // )
+console.log('DB_URL: ', DB_URL)
 export const pool = createPool(DB_URL)
